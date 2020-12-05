@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <div>
+      <ion-title>Meus Itens</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<IonList>
+		<IonItem class="inventory-box" *ngFor="let inventory of inventorys">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="{{ inventory.image_url }}">
+        </ion-thumbnail>
+        <div class="inventory">
+          <ion-label><strong><ion-icon name="play"></ion-icon> {{ inventory.name }}</strong></ion-label>
+          <ion-label><strong>ID ({{ inventory.id[0] }}{{ inventory.id[1] }}{{ inventory.id[2] }})</strong></ion-label>
+          <ion-label>Descrição: {{ inventory.description }}</ion-label>
+
+          <ion-button (click)="handleUpdate()" class="submit-button" color="warning" expand="block">Editar</ion-button>
+
+          <ion-button (click)="handleDelete(inventory.id)" class="submit-button" color="danger" expand="block">Excluir</ion-button>
+          
+        </div>
+        
+      </ion-item>
+		</IonItem>
+	</IonList>
+</ion-content>

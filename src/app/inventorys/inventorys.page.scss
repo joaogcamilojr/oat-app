@@ -1,0 +1,14 @@
+div.inventory {
+  flex: 1;
+  display: block;
+}
+
+.inventory-box {
+  cursor: pointer;
+
+  &:hover {
+    * {
+      opacity: 0.9;
+    }
+  }
+}

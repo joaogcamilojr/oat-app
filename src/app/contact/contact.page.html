@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <div>
+      <ion-title>Contato</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="form" (ngSubmit)="formSubmit()">
+    <ion-input type="text" [(ngModel)]="formData.name" name="name" placeholder="Nome" required><ion-icon name="person"></ion-icon></ion-input>
+    <ion-input type="text" [(ngModel)]="formData.email" name="email" placeholder="Email" required><ion-icon name="mail"></ion-icon></ion-input>
+    <ion-input type="text" [(ngModel)]="formData.message" name="message" placeholder="Mensagem" required><ion-icon name="chatbox"></ion-icon></ion-input>
+
+    <ion-button type="submit" class="submit-button" color="success" expand="block">Enviar</ion-button>
+  </form>
+</ion-content>

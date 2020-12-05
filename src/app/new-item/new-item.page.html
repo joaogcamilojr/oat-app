@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <div>
+      <ion-title>Novo Item</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="form" (ngSubmit)="formSubmit()">
+    <ion-input type="text" [(ngModel)]="formData.name" name="name" placeholder="Item" required><ion-icon name="pricetag"></ion-icon></ion-input>
+    <ion-input type="text" [(ngModel)]="formData.description" name="description" type="number" placeholder="Descrição" required><ion-icon name="information-circle"></ion-icon></ion-input>
+    <ion-input type="text" [(ngModel)]="formData.image_url" name="image_url" placeholder="Imgaem (URL)" required><ion-icon name="image"></ion-icon></ion-input>
+
+    <ion-button type="submit" class="submit-button" color="success" expand="block">Cadastrar</ion-button>
+  </form>
+</ion-content>
